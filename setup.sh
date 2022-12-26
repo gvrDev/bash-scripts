@@ -15,6 +15,7 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
 source ~/.bashrc
 nvm install --lts
 nvm use --lts
+source ~/.bashrc
 
 echo "Installing fonts"
 mkdir -p ~/.local/share/fonts
@@ -37,6 +38,10 @@ echo "Installing zsh plugins"
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+
+echo "Installing node dependencies"
+npm i -g update
+npm i -g @angular/cli @nestjs/cli tree-sitter-cli
 
 echo "Removing current dotfiles"
 rm -rf $HOME/.config/i3

@@ -12,6 +12,7 @@ sudo dnf install neovim kitty zsh lazygit brave-browser xclip xset xinput ripgre
 
 echo "Installing NVM"
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
+source ~/.bashrc
 nvm install --latest
 nvm use --latest
 
@@ -36,6 +37,15 @@ echo "Installing zsh plugins"
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+
+echo "Removing current dotfiles"
+rm -rf $HOME/.config/i3
+rm -rf $HOME/.config/nvim
+rm -rf $HOME/.config/kitty
+rm -rf $HOME/.config/my-autostart.sh
+rm -rf $HOME/.zshrc
+rm -rf $HOME/.p10k.zsh
+rm -rf $HOME/.my-dotfiles
 
 echo "Cloning new dotfiles"
 cd

@@ -1,3 +1,5 @@
+#!/bin/bash
+
 echo "Installing dependencies with dnf"
 sudo dnf install dnf-plugins-core
 

@@ -1,5 +1,3 @@
-#!/bin/bash
-
 echo "Removing oh-my-zsh plugins"
 find $HOME/.oh-my-zsh/custom/themes/ ! -name 'example.zsh-theme' -type f -exec rm -rf {} +
 find $HOME/.oh-my-zsh/custom/themes/ ! -name 'example.zsh-theme' -type d -exec rm -rf {} +

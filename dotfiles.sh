@@ -1,5 +1,3 @@
-#!/bin/bash
-
 echo "Removing current dotfiles"
 rm -rf $HOME/.config/i3
 rm -rf $HOME/.config/nvim

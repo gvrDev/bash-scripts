@@ -13,8 +13,8 @@ sudo dnf install neovim kitty zsh lazygit brave-browser xclip xset xinput ripgre
 echo "Installing NVM"
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
 source ~/.bashrc
-nvm install --latest
-nvm use --latest
+nvm install --lts
+nvm use --lts
 
 echo "Installing fonts"
 mkdir -p ~/.local/share/fonts
